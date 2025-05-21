@@ -108,9 +108,10 @@ aside > div > img{
     }
     nav > div > a{
         margin-left: 0;
+        margin-bottom: 5px;
     }
     aside {
-        display: none;
+        display: block;
         padding: 0;
         width: 100px;
     }
