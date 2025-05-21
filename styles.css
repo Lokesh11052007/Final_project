@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Kaushan Script", cursive;
+    font-weight: 400;
+}
+body{
+    background-color: rgba(0, 0, 0, 0.03);
+    
+    /* font-style: normal; */
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+    font-size: larger;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+nav h1{
+    font-weight: 600;
+    
+}
+nav> div > h1 > span{
+    color: orange;
+}
+
+nav > div > a {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    margin-left: 15px;
+    transition: transform 0.2s ease-in-out; 
+}
+a:hover{
+    transform: scale(1.03);
+}
+
+/* 1st Pages */
+aside {
+    padding: 80px 80px 0 80px;
+    display: flex;
+    justify-content: space-around;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+aside > div {
+    width: 30%;
+}
+
+aside > div > h1{
+    font-size: 4.5rem;
+    font-weight: 600;
+}
+aside > div > h1 > span{
+    color: orange;
+}
+aside > div > p{
+    margin-top: 10px;
+    color: rgba(0, 0, 0, 0.742);
+}
+aside > div > button{
+    margin-left: 100px;
+    margin-top: 30px;
+    padding: 10px;
+    width: 150px;
+    border-radius: 10px;
+    background-color: rgba(0, 128, 0, 0.795);
+    color: white;
+    letter-spacing: 3px;
+    border: none;
+}
+aside > div > button:hover{
+    background-color: green;
+    transform: scale(1.03);
+}
+
+aside > div > img{
+    width: 400px;
+    height: 400px;
+}
+
+
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width:480px) {
+    nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        padding: 0;
+    }
+    nav > div{
+        display: flex;
+        justify-content: center;
+    }
+    nav > div > a{
+        margin-left: 0;
+    }
+    aside {
+        display: none;
+        padding: 0;
+        width: 100px;
+    }
+}
